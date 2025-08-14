@@ -9,6 +9,7 @@ import ProfileScreen from '../screen/ProfileScreen';
 import BottomMenuBar from '../components/Common/BottomMenuBar';
 import WelcomeScreen from '../screen/WelcomeScreen';
 import RegistionScreen from '../screen/RegistionScreen';
+import EnterOtpScreen from '../screen/EnterOtpScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -43,6 +44,7 @@ export default function AppNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Registion" component={RegistionScreen} />
+      <Stack.Screen name="EnterOtp" component={EnterOtpScreen} />
       <Stack.Screen name="HomeMain" component={MainTabs} />
     </Stack.Navigator>
   );

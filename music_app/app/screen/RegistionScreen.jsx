@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TextInput } from "react-native";
 import CustomButton from "../components/Common/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 export default function RegistionScreen() {
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
   const [mobileNumber, setMobileNumber] = useState("");
 
   return (
@@ -24,6 +25,7 @@ export default function RegistionScreen() {
         className="bg-field text-white rounded-full w-[95%] mt-[80%] flex text-center mx-auto p-5 mb-6"
       />
       <CustomButton label={"Send OTP"} 
+      onPress={() => navigation.navigate('EnterOtp')}
         />
      </View>
 
