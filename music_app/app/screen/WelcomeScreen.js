@@ -18,7 +18,7 @@ export default function WelcomeScreen() {
         <View className="absolute bottom-[10%] w-full   pb-4"
         >
             <CustomButton label={"Start"}
-                onPress={() => navigation.navigate('HomeMain')}
+                onPress={() => navigation.navigate('Registion')}
             />
         </View>
 

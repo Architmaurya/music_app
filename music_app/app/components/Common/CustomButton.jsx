@@ -4,8 +4,8 @@ import { Pressable, Text } from 'react-native';
 export default function CustomButton({
   label,
   onPress,
-  className = 'bg-secondary rounded-full mx-4 py-3',
-  textClassName = 'text-primary font-bold text-center',
+  className = 'bg-secondary rounded-full mx-3 p-6',
+  textClassName = 'text-xl font-bold text-center',
 }) {
   return (
     <Pressable className={className} onPress={onPress}>

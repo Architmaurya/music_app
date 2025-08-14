@@ -6,8 +6,9 @@ import HomeScreen from '../screen/HomeScreen';
 import DetailsScreen from '../screen/DetailsScreen';
 import SearchScreen from '../screen/SearchScreen';
 import ProfileScreen from '../screen/ProfileScreen';
-import BottomMenuBar from '../common/BottomMenuBar';
+import BottomMenuBar from '../components/Common/BottomMenuBar';
 import WelcomeScreen from '../screen/WelcomeScreen';
+import RegistionScreen from '../screen/RegistionScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -41,6 +42,7 @@ export default function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Registion" component={RegistionScreen} />
       <Stack.Screen name="HomeMain" component={MainTabs} />
     </Stack.Navigator>
   );
