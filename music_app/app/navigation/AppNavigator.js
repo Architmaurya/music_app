@@ -41,7 +41,7 @@ export default function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="MainTabs" component={MainTabs} />
+      <Stack.Screen name="HomeMain" component={MainTabs} />
     </Stack.Navigator>
   );
 }
