@@ -4,9 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screen/HomeScreen';
 import DetailsScreen from '../screen/DetailsScreen';
-import SearchScreen from '../screen/SearchScreen';    
-import ProfileScreen from '../screen/ProfileScreen'; 
-import BottomMenuBar from '../common/BottomMenuBar'; 
+import SearchScreen from '../screen/SearchScreen';
+import ProfileScreen from '../screen/ProfileScreen';
+import BottomMenuBar from '../common/BottomMenuBar';
+import WelcomeScreen from '../screen/WelcomeScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,16 +22,26 @@ function HomeStack() {
   );
 }
 
-// Bottom tabs with custom BottomMenuBar
-export default function AppNavigator() {
+// Tabs with custom BottomMenuBar
+function MainTabs() {
   return (
     <Tab.Navigator
       screenOptions={{ headerShown: false }}
-      tabBar={props => <BottomMenuBar {...props} />} // render custom tab bar
+      tabBar={(props) => <BottomMenuBar {...props} />}
     >
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
+  );
+}
+
+// Root stack: Welcome first, then tabs
+export default function AppNavigator() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="MainTabs" component={MainTabs} />
+    </Stack.Navigator>
   );
 }
