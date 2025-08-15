@@ -15,14 +15,14 @@ export default function RegistionScreen() {
       </Text>
 
       {/* Input */}
-     <View>
+     <View className="w-full mt-[50%]">
          <TextInput
         placeholder="Enter mobile number"
         placeholderTextColor="#94a3b8"
         keyboardType="phone-pad"
         value={mobileNumber}
         onChangeText={setMobileNumber}
-        className="bg-field text-white rounded-full w-[95%] mt-[80%] flex text-center mx-auto p-5 mb-6"
+        className="bg-field text-white rounded-full w-[95%] flex text-center mx-auto p-5 mb-6"
       />
       <CustomButton label={"Send OTP"} 
       onPress={() => navigation.navigate('EnterOtp')}
