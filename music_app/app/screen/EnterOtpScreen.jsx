@@ -31,7 +31,7 @@ const EnterOtpScreen = () => {
         keyboardType="numeric"
         value={otp}
         onChangeText={setOtp}
-        className="bg-field text-white rounded-full w-full text-center p-5 mb-6"
+        className="bg-field text-red rounded-full w-full text-center p-5 mb-6"
       />
 
       {/* Button */}
