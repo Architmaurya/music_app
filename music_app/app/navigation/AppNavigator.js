@@ -1,5 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
@@ -42,16 +41,14 @@ function MainTabs() {
 // Root stack: Welcome first, then tabs
 export default function AppNavigator() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-        initialRouteName="Welcome"
-      >
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="Registion" component={RegistionScreen} />
-        <Stack.Screen name="EnterOtp" component={EnterOtpScreen} />
-        <Stack.Screen name="MainTabs" component={MainTabs} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName="Welcome"
+    >
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Registion" component={RegistionScreen} />
+      <Stack.Screen name="EnterOtp" component={EnterOtpScreen} />
+      <Stack.Screen name="MainTabs" component={MainTabs} />
+    </Stack.Navigator>
   );
 }

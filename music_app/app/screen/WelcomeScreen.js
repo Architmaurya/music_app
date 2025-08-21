@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function WelcomeScreen() {
      const navigation = useNavigation();
   return (
-    <View className="w-full h-full mt-12  bg-primary  ">
+    <View className="w-full h-full   bg-primary  ">
         <View className="">
             <Image source={photo} className="w-full " />
         </View>

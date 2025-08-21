@@ -8,7 +8,7 @@ export default function RegistionScreen() {
   const [mobileNumber, setMobileNumber] = useState("");
 
   return (
-    <View className=" bg-primary w-full h-full mt-12 pt-3">
+    <View className=" bg-primary w-full h-full  pt-3">
       {/* Title */}
       <Text className="text-white text-center text-3xl font-bold mt-3">
         Music Stream

@@ -9,7 +9,7 @@ const EnterOtpScreen = () => {
   const [otp, setOtp] = useState("");
 
   return (
-    <View className="flex-1 bg-primary px-4 mt-12 pt-6">
+    <View className="flex-1 bg-primary px-4  pt-6">
       {/* Back Arrow */}
       <TouchableOpacity
         onPress={() => navigation.goBack()}
@@ -37,7 +37,7 @@ const EnterOtpScreen = () => {
       {/* Button */}
       <CustomButton
         label="Verify"
-        onPress={() => navigation.navigate('HomeMain')}
+        onPress={() => navigation.navigate('MainTabs')}
       />
     </View>
     

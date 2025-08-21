@@ -1,8 +1,12 @@
-// App.js
-import React from 'react';
+import React from "react";
 import "@/global.css"; // Import global styles
-import AppNavigator from '../app/navigation/AppNavigator';
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "../app/navigation/AppNavigator";
 
 export default function App() {
-  return <AppNavigator />;  // <-- No NavigationContainer
+  return (
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }

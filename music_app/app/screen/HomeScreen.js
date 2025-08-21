@@ -43,7 +43,7 @@ export default function HomeScreen() {
   );
 
   return (
-    <SafeAreaView className="flex-1 bg-[#0d1f14] mt-12 px-4">
+    <SafeAreaView className="flex-1 bg-[#0d1f14] mt-1 px-4">
       {/* Header */}
       <View className="flex-row items-center justify-between -mt-8">
         <View className="w-10 h-10 rounded-full bg-gray-300" />
